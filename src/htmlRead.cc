@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include <stdshit.h>
 #include "htmlRead.h"
 
 // Original core

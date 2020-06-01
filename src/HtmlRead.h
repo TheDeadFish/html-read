@@ -3,7 +3,6 @@
 
 #ifndef _HTMLREAD_H_
 #define _HTMLREAD_H_
-#include "stdshit.h"
 
 struct HtmlEvent
 {

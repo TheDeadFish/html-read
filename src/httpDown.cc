@@ -1,4 +1,5 @@
-#include "stdafx.h"
+#include <winsock2.h>
+#include <stdshit.h>
 #include "httpDown.h"
 #include <iconv.h>
 #include <curl/curl.h>
@@ -91,7 +92,7 @@ FOUND_CHARSET:
 	if(cd == (iconv_t)-1) return file.data;
 	SCOPE_EXIT(free(file.data));
 	char* buffer2 = xMalloc(file.len*3);
-	const char* srcPos = file.data; char* dstPos = buffer2;
+	char* srcPos = file.data; char* dstPos = buffer2;
 	size_t inbytesleft = file.len;
 	size_t outbytesleft = file.len*3;
 	if(iconv(cd, &srcPos, &inbytesleft,
